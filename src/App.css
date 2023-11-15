@@ -1,26 +1,35 @@
 body {
     box-sizing: border-box;
+    
     padding: 0;
     margin: 0;
 
     background-color: beige;
+
+    line-height: 1.6rem;
+
+    font-family: sans-serif;
 }
 
-.app-container {
+:root {
     display: flex;
     justify-content: center;
     align-items: center;
 
     height: 100vh;
-    width: 100vw;
 }
 
 .register {
     background-color: white;
     box-shadow: 3px 3px 20px 5px grey;
 
-    /* width: 300px; */
-    padding: 1rem;
+    padding: 2rem;
+
+    width: 380px;
+}
+
+.form-title {
+    margin: 0;
 }
 
 .field-container {
@@ -30,12 +39,25 @@ body {
     margin-bottom: 1rem;
 }
 
+.field-input {
+    font-size: inherit;
+}
+
 .alert-message {
     color: red;
     
     margin: 0;
 }
 
+.button-container {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 2rem;
+}
+
 .submit-button {
-    width: 100%;
+    width: 10rem;
+
+    font-size: inherit;
 }

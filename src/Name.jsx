@@ -13,7 +13,7 @@ function Name({ username, setUsername }) {
     <div className="field-container">
       <label htmlFor="name">* Name: </label>
       <input
-        className="name"
+        className="field-input"
         type="text"
         id="name"
         value={username}

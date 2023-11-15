@@ -11,33 +11,36 @@ function App() {
   const [confirmEmail, setConfirmEmail] = useState("");
 
   function handleSubmit(event) {
-    if (!username || !email ) {
+    if (!username || !email) {
       event.preventDefault();
-    } 
+    }
   }
 
   return (
-    <div className="app-container">
-      <form
-        className="register"
-        action="/submit"
-        method="POST"
-        onSubmit={handleSubmit}
-      >
-        <h1>Basic Form</h1>
-        <p>
-          <em className="asterisk">*</em> Indicates a required field
-        </p>
+    <form
+      className="register"
+      action="/submit"
+      method="POST"
+      onSubmit={handleSubmit}
+    >
+      <h1 className="form-title">Basic Form</h1>
+      <p>
+        <em className="asterisk">*</em> Indicates a required field
+      </p>
+      <Name username={username} setUsername={setUsername} />
+      <Email email={email} setEmail={setEmail} />
+      <ConfirmEmail
+        confirmEmail={confirmEmail}
+        email={email}
+        setConfirmEmail={setConfirmEmail}
+      />
 
-        <Name username={username} setUsername={setUsername} />
-        <Email email={email} setEmail={setEmail} />
-        <ConfirmEmail confirmEmail={confirmEmail} email={email} setConfirmEmail={setConfirmEmail} />
-
-        <button className="submit-button" type="submit">
+      <div className="button-container">
+        <button className="submit-button" type="submit" onSubmit={handleSubmit}>
           Submit
         </button>
-      </form>
-    </div>
+      </div>
+    </form>
   );
 }
 

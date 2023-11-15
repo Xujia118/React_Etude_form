@@ -34,7 +34,7 @@ function Email({ email, setEmail }) {
     <div className="field-container">
       <label htmlFor="email">* Email: </label>
       <input
-        className="email"
+        className="field-input"
         type="text"
         id="email"
         value={email}
